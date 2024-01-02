@@ -57,7 +57,7 @@ func handleConnection(conn net.Conn) {
 		}
 
 		if bytesOut != bytesIn {
-			slog.Info(fmt.Sprintf("%s bytes read, %s bytes written: %s", bytesIn, bytesOut))
+			slog.Info(fmt.Sprintf("%d bytes read, %d bytes written", bytesIn, bytesOut))
 		}
 	}
 }
