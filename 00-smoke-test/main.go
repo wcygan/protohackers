@@ -50,7 +50,7 @@ func handleConnection(conn net.Conn) {
 		}
 
 		// Write the bytes back unmodified
-		bytesOut, err := conn.Write(buffer)
+		bytesOut, err := conn.Write(buffer[:bytesIn])
 		if err != nil {
 			slog.Info(fmt.Sprintf("Error: %s", err))
 			return
